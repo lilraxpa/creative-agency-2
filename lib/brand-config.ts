@@ -5,7 +5,8 @@ export const brandConfig = {
   // Company Information
   name: "Guard",
   tagline: "Securing Your Digital Assets",
-  description: "A professional cyber tech agency specializing in digital asset recovery and security solutions.",
+  description:
+    "A professional cyber tech agency specializing in digital asset recovery and security solutions with advanced threat detection and response capabilities.",
 
   // Contact Information
   email: "contact@guardagency.com",
@@ -24,35 +25,35 @@ export const brandConfig = {
       id: "bitcoin-recovery",
       title: "Bitcoin Recovery",
       description:
-        "Lost access to your Bitcoin wallet? Our expert team utilizes advanced techniques to help recover your digital assets securely and efficiently.",
+        "Lost access to your Bitcoin wallet? Our expert team utilizes advanced forensic techniques and blockchain analysis to help recover your digital assets securely and efficiently.",
       icon: "Bitcoin",
     },
     {
       id: "crypto-trading",
-      title: "Crypto Trading",
+      title: "Crypto Trading Security",
       description:
-        "Get professional guidance on cryptocurrency trading strategies, market analysis, and portfolio management to maximize your investment potential.",
+        "Get professional guidance on cryptocurrency trading security, secure wallet management, and advanced threat protection to safeguard your investment portfolio.",
       icon: "TrendingUp",
     },
     {
       id: "email-recovery",
-      title: "Email Recovery",
+      title: "Email Security & Recovery",
       description:
-        "Regain access to your important email accounts with our specialized recovery services, ensuring your personal and business communications remain secure.",
+        "Regain access to compromised email accounts with our specialized recovery services, ensuring your personal and business communications remain secure from cyber threats.",
       icon: "Mail",
     },
     {
       id: "game-activation",
-      title: "Game Activation",
+      title: "Gaming Account Security",
       description:
-        "Having trouble with game activations or lost game accounts? Our team provides solutions to restore access to your gaming platforms and purchases.",
+        "Protect and recover gaming accounts with our specialized security solutions. We provide comprehensive protection against account theft and unauthorized access.",
       icon: "Gamepad2",
     },
     {
       id: "social-media-recovery",
-      title: "Social Media Recovery",
+      title: "Social Media Security",
       description:
-        "Recover compromised or inaccessible social media accounts with our professional assistance, protecting your online presence and personal connections.",
+        "Recover compromised social media accounts and implement advanced security measures to protect your online presence from cyber attacks and unauthorized access.",
       icon: "Share2",
     },
   ],
@@ -60,7 +61,7 @@ export const brandConfig = {
   // Footer Links
   footerLinks: [
     {
-      title: "Company",
+      title: "COMPANY",
       links: [
         { name: "About", href: "/about" },
         { name: "Services", href: "/services" },
@@ -69,13 +70,13 @@ export const brandConfig = {
       ],
     },
     {
-      title: "Services",
+      title: "SERVICES",
       links: [
         { name: "Bitcoin Recovery", href: "/services#bitcoin-recovery" },
-        { name: "Crypto Trading", href: "/services#crypto-trading" },
-        { name: "Email Recovery", href: "/services#email-recovery" },
-        { name: "Game Activation", href: "/services#game-activation" },
-        { name: "Social Media Recovery", href: "/services#social-media-recovery" },
+        { name: "Crypto Trading Security", href: "/services#crypto-trading" },
+        { name: "Email Security", href: "/services#email-recovery" },
+        { name: "Gaming Security", href: "/services#game-activation" },
+        { name: "Social Media Security", href: "/services#social-media-recovery" },
       ],
     },
   ],

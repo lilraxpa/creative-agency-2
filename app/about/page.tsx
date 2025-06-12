@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { FadeInOnScroll } from "@/components/fade-in-on-scroll"
 import { StaggeredFadeIn } from "@/components/staggered-fade-in"
+import { TeamSection } from "@/components/team-section"
 
 export const metadata = {
   title: "About Us",
@@ -32,13 +33,18 @@ export default function AboutPage() {
               </div>
             </FadeInOnScroll>
             <FadeInOnScroll direction="right" delay={200}>
-              <div className="relative h-[300px] md:h-[400px]">
+              <div className="relative h-[300px] md:h-[400px] cyber-border-enhanced overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=Our+Team"
+                  src="/placeholder.svg?height=400&width=600&text=Cyber+Security+Team"
                   alt="Our Team"
                   fill
-                  className="object-cover rounded-lg"
+                  className="object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                  <h2 className="text-2xl font-bold text-white font-mono">ELITE SECURITY TEAM</h2>
+                  <p className="text-green-300">Protecting your digital assets since 2015</p>
+                </div>
               </div>
             </FadeInOnScroll>
           </div>
@@ -46,17 +52,26 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-16 md:py-24 bg-muted/40">
-        <div className="container">
+      <section className="py-16 md:py-24 bg-muted/40 relative overflow-hidden">
+        <div className="absolute inset-0 cyber-grid-enhanced opacity-20"></div>
+        <div className="container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <FadeInOnScroll direction="left">
-              <div className="order-2 lg:order-1 relative h-[300px] md:h-[400px]">
+              <div className="order-2 lg:order-1 relative h-[300px] md:h-[400px] cyber-border-enhanced overflow-hidden rounded-lg">
                 <Image
                   src="/placeholder.svg?height=400&width=600&text=Our+Mission"
                   alt="Our Mission"
                   fill
-                  className="object-cover rounded-lg"
+                  className="object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Shield className="h-16 w-16 text-green-400 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-white font-mono">MISSION STATEMENT</h3>
+                    <div className="w-16 h-1 bg-green-500 mx-auto my-4"></div>
+                  </div>
+                </div>
               </div>
             </FadeInOnScroll>
             <FadeInOnScroll direction="right" delay={200}>
@@ -73,6 +88,11 @@ export default function AboutPage() {
                   We believe in combining technical expertise with exceptional customer service to deliver secure,
                   reliable, and effective solutions for all your digital security needs.
                 </p>
+                <div className="pt-4">
+                  <Button asChild className="btn-hacker">
+                    <Link href="/services">Explore Our Services</Link>
+                  </Button>
+                </div>
               </div>
             </FadeInOnScroll>
           </div>
@@ -115,10 +135,10 @@ export default function AboutPage() {
               ].map((value) => (
                 <Card
                   key={value.title}
-                  className="cyber-border hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="cyber-border-enhanced hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   <CardHeader className="text-center">
-                    <value.icon className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+                    <value.icon className="h-12 w-12 text-green-600 mx-auto mb-4" />
                     <CardTitle>{value.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -132,8 +152,9 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 md:py-24 bg-muted/40">
-        <div className="container">
+      <section className="py-16 md:py-24 bg-muted/40 relative overflow-hidden">
+        <div className="absolute inset-0 cyber-grid-enhanced opacity-20"></div>
+        <div className="container relative z-10">
           <FadeInOnScroll>
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -143,40 +164,26 @@ export default function AboutPage() {
             </div>
           </FadeInOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <StaggeredFadeIn staggerDelay={200}>
-              {[1, 2, 3].map((member) => (
-                <div key={member} className="text-center group">
-                  <div className="relative h-64 w-64 mx-auto mb-4 overflow-hidden rounded-full group-hover:scale-105 transition-transform duration-300">
-                    <Image
-                      src={`/placeholder.svg?height=256&width=256&text=Team Member ${member}`}
-                      alt={`Team Member ${member}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <h3 className="text-xl font-bold">Team Member {member}</h3>
-                  <p className="text-purple-600 mb-2">Security Expert</p>
-                  <p className="text-muted-foreground">
-                    Experienced professional with expertise in digital security and asset recovery.
-                  </p>
-                </div>
-              ))}
-            </StaggeredFadeIn>
-          </div>
+          <TeamSection />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-purple-600 text-white">
-        <div className="container">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-green-900 to-green-800 text-white relative overflow-hidden">
+        <div className="absolute inset-0 cyber-grid-enhanced opacity-20"></div>
+        <div className="container relative z-10">
           <FadeInOnScroll>
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold">Ready to work with us?</h2>
-              <p className="text-purple-100 text-lg">
+              <p className="text-green-100 text-lg">
                 Contact our team today to learn more about our services and how we can help secure your digital assets.
               </p>
-              <Button asChild size="lg" variant="secondary" className="hover:scale-105 transition-all duration-300">
+              <Button
+                asChild
+                size="lg"
+                variant="secondary"
+                className="hover:scale-105 transition-all duration-300 btn-hacker"
+              >
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
